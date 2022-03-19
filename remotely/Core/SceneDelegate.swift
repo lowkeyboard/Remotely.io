@@ -24,7 +24,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.rootViewController = TabBarViewController()
         }
         else {
-            let navVC = UINavigationController(rootViewController: LoginViewController())
+//            let navVC = UINavigationController(rootViewController: LoginViewController())
+            let navVC = UINavigationController(rootViewController: OnboardViewController())
+
             navVC.navigationBar.prefersLargeTitles = true
             window.rootViewController = navVC
         }
