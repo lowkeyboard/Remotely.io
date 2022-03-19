@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A21954EB27E4B4E000310786 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21954EA27E4B4E000310786 /* OnboardViewController.swift */; };
 		A27A2C6727E27747006BB050 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27A2C6627E27747006BB050 /* AppDelegate.swift */; };
 		A27A2C6927E27747006BB050 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27A2C6827E27747006BB050 /* SceneDelegate.swift */; };
 		A27A2C6B27E27747006BB050 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27A2C6A27E27747006BB050 /* LoginViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A21954EA27E4B4E000310786 /* OnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
 		A27A2C6327E27747006BB050 /* remotely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = remotely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27A2C6627E27747006BB050 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A27A2C6827E27747006BB050 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				A27A2C6A27E27747006BB050 /* LoginViewController.swift */,
 				A2E031B427E3146000381667 /* TabBarViewController.swift */,
+				A21954EA27E4B4E000310786 /* OnboardViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A27A2C6B27E27747006BB050 /* LoginViewController.swift in Sources */,
+				A21954EB27E4B4E000310786 /* OnboardViewController.swift in Sources */,
 				A2E031B127E312DD00381667 /* AuthManager.swift in Sources */,
 				A27A2C6727E27747006BB050 /* AppDelegate.swift in Sources */,
 				A2E031B527E3146000381667 /* TabBarViewController.swift in Sources */,
