@@ -68,6 +68,17 @@ class OnboardViewController: UIViewController {
         return signupbutton
     }()
     
+    private let signInButton: UIButton = {
+        let signInButton = UIButton()
+        signInButton.setTitle("Log in", for: .normal)
+        signInButton.setTitleColor(.RT_Black, for: .normal)
+        signInButton.setTitleColor(.RT_GreyLight, for: .selected)
+
+        signInButton.backgroundColor = UIColor.black.withAlphaComponent(0.0)
+        signInButton.translatesAutoresizingMaskIntoConstraints = false
+       
+        return signInButton
+    }()
     
 
     override func viewDidLoad() {
@@ -78,17 +89,26 @@ class OnboardViewController: UIViewController {
         imageView.addSubview(titleLabel)
         imageView.addSubview(descriptionLabel)
         
-        signUpButton.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(self.signUpbuttonAction(sender:)), for: .touchUpInside)
+        
+        signInButton.addTarget(self, action: #selector(self.signInbuttonAction(sender:)), for: .touchUpInside)
         
         view.addSubview(signUpButton)
+        view.addSubview(signInButton)
         
         addConstraints()
         
     }
     
-    @objc func buttonAction(sender: UIButton) {
-      print("Button tapped")
+    @objc func signUpbuttonAction(sender: UIButton) {
+      print("signUpbuttonAction tapped")
     }
+    
+    @objc func signInbuttonAction(sender: UIButton) {
+      print("signInbuttonAction tapped")
+        //navigate to sign in page
+    }
+
 
     
     private func addConstraints() {
@@ -128,6 +148,13 @@ class OnboardViewController: UIViewController {
         constraints.append(signUpButton.widthAnchor.constraint(equalTo: descriptionLabel.safeAreaLayoutGuide.widthAnchor, multiplier: 0.9))
 
         constraints.append(signUpButton.centerYAnchor.constraint(equalTo: descriptionLabel.centerYAnchor, constant: 50))
+        
+        //signInButton
+        constraints.append(signInButton.leadingAnchor.constraint(equalTo: descriptionLabel.leadingAnchor))
+
+        constraints.append(signInButton.widthAnchor.constraint(equalTo: descriptionLabel.safeAreaLayoutGuide.widthAnchor, multiplier: 0.9))
+
+        constraints.append(signInButton.centerYAnchor.constraint(equalTo: descriptionLabel.centerYAnchor, constant: 100))
 
         //Activate (Applying)
         NSLayoutConstraint.activate(constraints)
