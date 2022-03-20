@@ -55,19 +55,41 @@ class OnboardViewController: UIViewController {
 
         return imageView
     }()
+    
+    private let signUpButton: UIButton = {
+        let signupbutton = UIButton()
+        signupbutton.setTitle("Sign Up", for: .normal)
+        signupbutton.setTitleColor(.RT_Black, for: .normal)
+        signupbutton.setTitleColor(.RT_GreyLight, for: .selected)
+
+        signupbutton.backgroundColor = .RT_Primary
+        signupbutton.translatesAutoresizingMaskIntoConstraints = false
+       
+        return signupbutton
+    }()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.addSubview(imageView)
 
         imageView.addSubview(welcomeLabel)
         imageView.addSubview(titleLabel)
         imageView.addSubview(descriptionLabel)
         
+        signUpButton.addTarget(self, action: #selector(self.buttonAction(sender:)), for: .touchUpInside)
+        
+        view.addSubview(signUpButton)
+        
         addConstraints()
         
     }
+    
+    @objc func buttonAction(sender: UIButton) {
+      print("Button tapped")
+    }
+
     
     private func addConstraints() {
         var constraints = [NSLayoutConstraint]()
@@ -100,6 +122,12 @@ class OnboardViewController: UIViewController {
 
         constraints.append(descriptionLabel.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor, constant: 35))
 
+        //signUpButton
+        constraints.append(signUpButton.leadingAnchor.constraint(equalTo: descriptionLabel.leadingAnchor))
+
+        constraints.append(signUpButton.widthAnchor.constraint(equalTo: descriptionLabel.safeAreaLayoutGuide.widthAnchor, multiplier: 0.9))
+
+        constraints.append(signUpButton.centerYAnchor.constraint(equalTo: descriptionLabel.centerYAnchor, constant: 50))
 
         //Activate (Applying)
         NSLayoutConstraint.activate(constraints)
