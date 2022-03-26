@@ -7,13 +7,15 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, Coordinating {
+    var coordinator: Coordinator?
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        title = "login view controller"
         
     }
     

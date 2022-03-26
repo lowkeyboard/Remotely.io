@@ -4,34 +4,29 @@
 //
 //  Created by cagla copuroglu on 16.03.2022.
 //
+//
 
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-var window: UIWindow?
+    var window: UIWindow?
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        
+        let navVC = UINavigationController()
+        let coordinator = AuthCoordinator()
+        coordinator.navigationController = navVC
         
         let window = UIWindow(frame: UIScreen.main.bounds)
-        
-        if AuthManager.shared.isSignedIn {
-            window.rootViewController = TabBarViewController()
-        }
-        else {
-//            let navVC = UINavigationController(rootViewController: LoginViewController())
-            let navVC = UINavigationController(rootViewController: OnboardViewController())
-
-            navVC.navigationBar.prefersLargeTitles = true
-            window.rootViewController = navVC
-        }
-        
+        window.rootViewController = navVC
         window.makeKeyAndVisible()
         self.window = window
+        
+        coordinator.start()
         
         return true
     }

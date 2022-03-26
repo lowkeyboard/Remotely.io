@@ -7,7 +7,9 @@
 
 import UIKit
 
-class OnboardViewController: UIViewController {
+class OnboardViewController: UIViewController, Coordinating {
+    var coordinator: Coordinator?
+    
     
     private let myView: UIView = {
         let myView = UIView()
@@ -107,6 +109,7 @@ class OnboardViewController: UIViewController {
     @objc func signInbuttonAction(sender: UIButton) {
       print("signInbuttonAction tapped")
         //navigate to sign in page
+        coordinator?.eventOccured(with: .loginSelected)
     }
 
 
