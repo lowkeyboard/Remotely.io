@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		580E3E1191FB052D932459E3 /* Pods_remotely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D399BBDF69B3330DA0F4EB8E /* Pods_remotely.framework */; };
 		A21954EB27E4B4E000310786 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21954EA27E4B4E000310786 /* OnboardViewController.swift */; };
+		A264576F27F1CC69008B5042 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A264576E27F1CC69008B5042 /* AuthManager.swift */; };
 		A27A2C6727E27747006BB050 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27A2C6627E27747006BB050 /* AppDelegate.swift */; };
 		A27A2C6927E27747006BB050 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27A2C6827E27747006BB050 /* SceneDelegate.swift */; };
 		A27A2C6B27E27747006BB050 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27A2C6A27E27747006BB050 /* LoginViewController.swift */; };
@@ -18,12 +20,12 @@
 		B778BA9F27EED3B7007BC766 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778BA9E27EED3B7007BC766 /* Coordinator.swift */; };
 		B778BAA127EED3F6007BC766 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778BAA027EED3F6007BC766 /* AuthCoordinator.swift */; };
 		B778BAA327EED420007BC766 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778BAA227EED420007BC766 /* HomeViewController.swift */; };
-		B778BAA527EEE06C007BC766 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B778BAA427EEE06C007BC766 /* GoogleService-Info.plist */; };
-		B778BAA827EEE1C6007BC766 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B778BAA727EEE1C6007BC766 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3689F02D8B1A32FD1A00AD08 /* Pods-remotely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-remotely.debug.xcconfig"; path = "Target Support Files/Pods-remotely/Pods-remotely.debug.xcconfig"; sourceTree = "<group>"; };
 		A21954EA27E4B4E000310786 /* OnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
+		A264576E27F1CC69008B5042 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		A27A2C6327E27747006BB050 /* remotely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = remotely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27A2C6627E27747006BB050 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A27A2C6827E27747006BB050 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +38,8 @@
 		B778BA9E27EED3B7007BC766 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B778BAA027EED3F6007BC766 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		B778BAA227EED420007BC766 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		B778BAA427EEE06C007BC766 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D399BBDF69B3330DA0F4EB8E /* Pods_remotely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_remotely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2554664E8AF5042688EEFAA /* Pods-remotely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-remotely.release.xcconfig"; path = "Target Support Files/Pods-remotely/Pods-remotely.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,18 +47,101 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B778BAA827EEE1C6007BC766 /* FirebaseAuth in Frameworks */,
+				580E3E1191FB052D932459E3 /* Pods_remotely.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57F0C8E4749CB63305A29F7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3689F02D8B1A32FD1A00AD08 /* Pods-remotely.debug.xcconfig */,
+				E2554664E8AF5042688EEFAA /* Pods-remotely.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6ECC3E7A3A4E40694484D418 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D399BBDF69B3330DA0F4EB8E /* Pods_remotely.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A264576D27F1CC4C008B5042 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A264576E27F1CC69008B5042 /* AuthManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A264577027F1CCA8008B5042 /* splash */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = splash;
+			sourceTree = "<group>";
+		};
+		A264577127F1CCB3008B5042 /* onboard */ = {
+			isa = PBXGroup;
+			children = (
+				A21954EA27E4B4E000310786 /* OnboardViewController.swift */,
+			);
+			path = onboard;
+			sourceTree = "<group>";
+		};
+		A264577227F1CCC4008B5042 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				A264577627F1CF94008B5042 /* viewmodel */,
+				A264577527F1CF8E008B5042 /* view */,
+				A264577427F1CF89008B5042 /* model */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		A264577327F1CCCA008B5042 /* register */ = {
+			isa = PBXGroup;
+			children = (
+				B778BA9C27EED365007BC766 /* SignUpViewController.swift */,
+			);
+			path = register;
+			sourceTree = "<group>";
+		};
+		A264577427F1CF89008B5042 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A264577527F1CF8E008B5042 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A27A2C6A27E27747006BB050 /* LoginViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A264577627F1CF94008B5042 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
 		A27A2C5A27E27747006BB050 = {
 			isa = PBXGroup;
 			children = (
 				A27A2C6527E27747006BB050 /* remotely */,
 				A27A2C6427E27747006BB050 /* Products */,
+				57F0C8E4749CB63305A29F7D /* Pods */,
+				6ECC3E7A3A4E40694484D418 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,7 +156,7 @@
 		A27A2C6527E27747006BB050 /* remotely */ = {
 			isa = PBXGroup;
 			children = (
-				B778BA9827EED2E6007BC766 /* Managers */,
+				A264576D27F1CC4C008B5042 /* Networking */,
 				B778BA9727EED2DE007BC766 /* Coordinators */,
 				A2E031B627E318AF00381667 /* Extensions */,
 				A2E031B327E3144900381667 /* View Controllers */,
@@ -78,7 +164,6 @@
 				A27A2C6F27E27748006BB050 /* Assets.xcassets */,
 				A27A2C7127E27748006BB050 /* LaunchScreen.storyboard */,
 				A27A2C7427E27748006BB050 /* Info.plist */,
-				B778BAA427EEE06C007BC766 /* GoogleService-Info.plist */,
 			);
 			path = remotely;
 			sourceTree = "<group>";
@@ -95,8 +180,9 @@
 		A2E031B327E3144900381667 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A264577127F1CCB3008B5042 /* onboard */,
+				A264577027F1CCA8008B5042 /* splash */,
 				B778BA9B27EED340007BC766 /* home */,
-				B778BA9A27EED339007BC766 /* splash */,
 				B778BA9927EED32A007BC766 /* auth */,
 			);
 			path = "View Controllers";
@@ -119,28 +205,13 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
-		B778BA9827EED2E6007BC766 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
 		B778BA9927EED32A007BC766 /* auth */ = {
 			isa = PBXGroup;
 			children = (
-				A21954EA27E4B4E000310786 /* OnboardViewController.swift */,
-				A27A2C6A27E27747006BB050 /* LoginViewController.swift */,
-				B778BA9C27EED365007BC766 /* SignUpViewController.swift */,
+				A264577327F1CCCA008B5042 /* register */,
+				A264577227F1CCC4008B5042 /* login */,
 			);
 			path = auth;
-			sourceTree = "<group>";
-		};
-		B778BA9A27EED339007BC766 /* splash */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = splash;
 			sourceTree = "<group>";
 		};
 		B778BA9B27EED340007BC766 /* home */ = {
@@ -158,18 +229,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A27A2C7727E27748006BB050 /* Build configuration list for PBXNativeTarget "remotely" */;
 			buildPhases = (
+				069B0C9E9FB6F2EF4B70F15D /* [CP] Check Pods Manifest.lock */,
 				A27A2C5F27E27747006BB050 /* Sources */,
 				A27A2C6027E27747006BB050 /* Frameworks */,
 				A27A2C6127E27747006BB050 /* Resources */,
+				5145F125F7736541E7AC146B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = remotely;
-			packageProductDependencies = (
-				B778BAA727EEE1C6007BC766 /* FirebaseAuth */,
-			);
 			productName = remotely;
 			productReference = A27A2C6327E27747006BB050 /* remotely.app */;
 			productType = "com.apple.product-type.application";
@@ -198,9 +268,6 @@
 				Base,
 			);
 			mainGroup = A27A2C5A27E27747006BB050;
-			packageReferences = (
-				B778BAA627EEE1C6007BC766 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			productRefGroup = A27A2C6427E27747006BB050 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -217,11 +284,52 @@
 			files = (
 				A27A2C7327E27748006BB050 /* LaunchScreen.storyboard in Resources */,
 				A27A2C7027E27748006BB050 /* Assets.xcassets in Resources */,
-				B778BAA527EEE06C007BC766 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		069B0C9E9FB6F2EF4B70F15D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-remotely-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5145F125F7736541E7AC146B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-remotely/Pods-remotely-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-remotely/Pods-remotely-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-remotely/Pods-remotely-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A27A2C5F27E27747006BB050 /* Sources */ = {
@@ -237,6 +345,7 @@
 				A2E031B827E318C800381667 /* Color+Extensions.swift in Sources */,
 				B778BAA127EED3F6007BC766 /* AuthCoordinator.swift in Sources */,
 				B778BA9F27EED3B7007BC766 /* Coordinator.swift in Sources */,
+				A264576F27F1CC69008B5042 /* AuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +481,7 @@
 		};
 		A27A2C7827E27748006BB050 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3689F02D8B1A32FD1A00AD08 /* Pods-remotely.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -399,6 +509,7 @@
 		};
 		A27A2C7927E27748006BB050 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2554664E8AF5042688EEFAA /* Pods-remotely.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -446,25 +557,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B778BAA627EEE1C6007BC766 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B778BAA727EEE1C6007BC766 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B778BAA627EEE1C6007BC766 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A27A2C5B27E27747006BB050 /* Project object */;
 }
