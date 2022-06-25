@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
-class HomeViewController : UIViewController {
+class HomeViewController: UIViewController {
+
+    // private lazy var items : [CatModel] = []
     override func viewDidLoad() {
         title = "Home view controller"
     }

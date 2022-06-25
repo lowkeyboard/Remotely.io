@@ -9,7 +9,7 @@ import Foundation
 
 enum Service {
     static let baseUrl = "https://api.thecatapi.com/"
-    
+
     enum Endpoint {
         static let breeds = "v1/breeds"
     }

@@ -248,7 +248,7 @@
 				A27A2C6027E27747006BB050 /* Frameworks */,
 				A27A2C6127E27747006BB050 /* Resources */,
 				5145F125F7736541E7AC146B /* [CP] Embed Pods Frameworks */,
-				B712370B2862CD2C00CCF15D /* ShellScript */,
+				B712370B2862CD2C00CCF15D /* Run Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -344,22 +344,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-remotely/Pods-remotely-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B712370B2862CD2C00CCF15D /* ShellScript */ = {
+		B712370B2862CD2C00CCF15D /* Run Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
 			);
+			name = "Run Swiftlint";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "# Adds support for Apple Silicon brew directory\nexport PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint; then\n    swiftlint autocorrect && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

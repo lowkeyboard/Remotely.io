@@ -23,5 +23,4 @@ extension UIColor {
     static let RTWhite: UIColor = UIColor(named: "RT_White")!
     static let RTWhiteShade: UIColor = UIColor(named: "RT_WhiteShade")!
 
-    
 }
