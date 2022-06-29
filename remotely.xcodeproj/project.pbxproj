@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		580E3E1191FB052D932459E3 /* Pods_remotely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D399BBDF69B3330DA0F4EB8E /* Pods_remotely.framework */; };
 		A21954EB27E4B4E000310786 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21954EA27E4B4E000310786 /* OnboardViewController.swift */; };
+		A2551C72286C32A700AE3558 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2551C71286C32A700AE3558 /* UIView+Extension.swift */; };
 		A27A2C6727E27747006BB050 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27A2C6627E27747006BB050 /* AppDelegate.swift */; };
 		A27A2C6927E27747006BB050 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27A2C6827E27747006BB050 /* SceneDelegate.swift */; };
 		A27A2C6B27E27747006BB050 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27A2C6A27E27747006BB050 /* LoginViewController.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		3689F02D8B1A32FD1A00AD08 /* Pods-remotely.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-remotely.debug.xcconfig"; path = "Target Support Files/Pods-remotely/Pods-remotely.debug.xcconfig"; sourceTree = "<group>"; };
 		A21954EA27E4B4E000310786 /* OnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
+		A2551C71286C32A700AE3558 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A27A2C6327E27747006BB050 /* remotely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = remotely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27A2C6627E27747006BB050 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A27A2C6827E27747006BB050 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				A2E031B727E318C800381667 /* Color+Extensions.swift */,
+				A2551C71286C32A700AE3558 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B748A983286544D10079C20D /* AuthService.swift in Sources */,
+				A2551C72286C32A700AE3558 /* UIView+Extension.swift in Sources */,
 				A27A2C6B27E27747006BB050 /* LoginViewController.swift in Sources */,
 				A21954EB27E4B4E000310786 /* OnboardViewController.swift in Sources */,
 				A27A2C6727E27747006BB050 /* AppDelegate.swift in Sources */,
