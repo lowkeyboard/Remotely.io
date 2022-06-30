@@ -20,7 +20,6 @@ final class LoginViewController: UIViewController, Coordinating {
 
     let icon = UIImage(named: "google-icon")
     let fbicon = UIImage(named: "fb-icon")
-    lazy var viewModel: AuthVM = AuthVM()
 
     // Create Attachment
     let imageAttachment = NSTextAttachment()
@@ -40,15 +39,18 @@ final class LoginViewController: UIViewController, Coordinating {
         guard let usernameTF = usernameTextField.text, let passwordTF = passwordTextField.text, !usernameTF.isEmpty, !passwordTF.isEmpty else {
             print("empty input handling")
             let alert = UIAlertController(title: "Cannot be left empty.", message: "Please fill in  username and password.", preferredStyle: .alert)
+
             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
                 NSLog("The \"Request Failed\" alert occured.")
             }))
-            self.present(alert, animated: true, completion: nil)
+
+                self.present(alert, animated: true, completion: nil)
             return
         }
 
-//        viewModel.signInWith(email: usernameTF, password: passwordTF)
-        coordinator?.eventOccured(with: .loginbuttonTapped)
+        let currentUser = NetworkManager.shared.signInWith(email: usernameTF, password: passwordTF)
+
+        self.coordinator?.eventOccured(with: .loginbuttonTapped)
 
     }
 

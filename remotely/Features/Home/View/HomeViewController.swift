@@ -12,5 +12,6 @@ class HomeViewController: UIViewController, Coordinating {
 
     override func viewDidLoad() {
         title = "Home view controller"
+        view.backgroundColor = .RTWhite
     }
 }

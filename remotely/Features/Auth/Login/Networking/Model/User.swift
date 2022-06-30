@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct UserModel {
+struct User {
     var id: String
     var email: String
     var username: String
@@ -25,7 +25,7 @@ struct UserModel {
         username = data["username"] as? String ?? ""
     }
 
-    static func modelToData(user: UserModel) -> [String: Any] {
+    static func modelToData(user: User) -> [String: Any] {
         let data : [String: Any] = [
             "id" : user.id,
             "email" : user.email,
