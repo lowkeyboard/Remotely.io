@@ -22,11 +22,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         coordinator.navigationController = navVC
 
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = navVC
+        coordinator.start()
+
+        window.rootViewController = navVC.viewControllers.first
+
         window.makeKeyAndVisible()
         self.window = window
-
-        coordinator.start()
 
     }
 

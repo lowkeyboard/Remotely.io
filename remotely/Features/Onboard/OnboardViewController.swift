@@ -88,9 +88,11 @@ class OnboardViewController: UIViewController, Coordinating {
         view.addSubview(signInButton)
         addConstraints()
     }
+
     @objc func signUpbuttonAction(sender: UIButton) {
       print("signUpbuttonAction tapped")
     }
+
     @objc func signInbuttonAction(sender: UIButton) {
       print("signInbuttonAction tapped")
         //   navigate to sign in page

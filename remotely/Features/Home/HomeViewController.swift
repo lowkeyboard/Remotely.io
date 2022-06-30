@@ -7,9 +7,9 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, Coordinating {
+    var coordinator: Coordinator?
 
-    // private lazy var items : [CatModel] = []
     override func viewDidLoad() {
         title = "Home view controller"
     }

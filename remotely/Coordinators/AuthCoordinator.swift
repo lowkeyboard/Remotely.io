@@ -15,8 +15,10 @@ class AuthCoordinator: Coordinator {
     func eventOccured(with type: AuthEvent) {
         switch type {
         case .loginbuttonTapped:
-            // Network manager delegate should handle auth request.
-            print("loginbuttontapped event")
+            var vc: UIViewController & Coordinating = HomeViewController()
+            vc.coordinator? = self
+            navigationController?.pushViewController(vc, animated: true)
+
         case .loginSelected:
             var vc: UIViewController & Coordinating = LoginViewController()
             vc.coordinator? = self
@@ -28,7 +30,11 @@ class AuthCoordinator: Coordinator {
     func start() {
         var vc: UIViewController & Coordinating = OnboardViewController()
         vc.coordinator = self
-        navigationController?.setViewControllers([vc], animated: false)
+
+        var vc1: UIViewController & Coordinating = LoginViewController()
+        vc1.coordinator = self
+
+        navigationController?.setViewControllers([vc, vc1], animated: false)
 
     }
 

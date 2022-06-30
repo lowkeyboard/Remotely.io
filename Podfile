@@ -9,5 +9,6 @@ target 'remotely' do
   pod 'Alamofire', '~> 5.5'
   pod 'SnapKit', '~> 5.6.0'
   pod 'Firebase'
+  pod 'FirebaseAuth'
 
 end
