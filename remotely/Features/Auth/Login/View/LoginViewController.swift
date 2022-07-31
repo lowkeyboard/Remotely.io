@@ -67,7 +67,8 @@ final class LoginViewController: UIViewController, Coordinating {
         loginButton.addTarget(self, action: #selector(self.loginButtonAction(sender:)), for: .touchUpInside)
 
         DispatchQueue.main.async {
-            self.view.backgroundColor = .RTSecondary
+            self.view.backgroundColor = .RTGreyLight
+            self.navigationItem.hidesBackButton = true
 
             // label configuration
             self.labelTitle.font = .boldSystemFont(ofSize: 25)
@@ -77,7 +78,7 @@ final class LoginViewController: UIViewController, Coordinating {
             let fullString = NSMutableAttributedString(string:"HI FELLA ")
 
 //            self.welcomeLabel.text = "Hi Fella"
-            self.welcomeLabel.textColor = .RTWhite
+            self.welcomeLabel.textColor = .RTWhiteShade
             self.welcomeLabel.font = UIFont(name: "ArialHB", size: 13)
             self.imageAttachment.bounds = CGRect(x: 0, y: -8, width: 25, height: 25)
             self.imageAttachment.image = UIImage(named:"emoji-hand-icon")
@@ -159,6 +160,7 @@ extension LoginViewController {
             make.right.equalTo(view).offset(-10)
             make.height.greaterThanOrEqualTo(10)
         }
+
     }
 
     func makeInput() {
