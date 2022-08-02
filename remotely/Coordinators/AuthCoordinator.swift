@@ -15,7 +15,8 @@ class AuthCoordinator: Coordinator {
     func eventOccured(with type: AuthEvent) {
         switch type {
         case .loginbuttonTapped:
-            var vc: UIViewController & Coordinating = HomeViewController()
+//            var vc: UIViewController & Coordinating = HomeViewController()
+            var vc: UIViewController & Coordinating = RickyMortyViewController()
             vc.coordinator? = self
             navigationController?.pushViewController(vc, animated: true)
 

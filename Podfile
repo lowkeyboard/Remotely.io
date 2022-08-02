@@ -5,22 +5,23 @@
   use_frameworks!
 
 workspace 'remotely'
-#core module
-def core_pods
+#pokemon module
+def pokemon_pods
   pod 'Alamofire', '~> 5.5'
+  pod 'AlamofireImage'
   pod 'Firebase'
   pod 'FirebaseAuth'
 end
 
-target 'Core' do
-  project 'Core/Core.project'
-  core_pods
+target 'PokemonAPI' do
+  project 'PokemonAPI/PokemonAPI.project'
+  pokemon_pods
 end
 
 #app module
 
 def application_pods
-  core_pods
+  pokemon_pods
 end
 
   # Pods for remotely
