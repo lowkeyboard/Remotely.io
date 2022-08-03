@@ -7,11 +7,12 @@
 
 import Foundation
 
-public class NetworkingProvider : APIServiceProtocol {
-    static let share = NetworkingProvider()
+public class PokemonService : APIServiceProtocol {
+
+    public init() {}
 
     // General request to retrieve all pokemons.
-     func getPokemons( success: @escaping (_ pokemon: [Pokemon]) -> Void, failure: @escaping (_ error: Error?) -> Void ) {
+     public func allPokemon(success: @escaping (_ pokemon: [Pokemon]) -> Void, failure: @escaping (_ error: Error?) -> Void ) {
         guard let url = URL(string: Service.allPokemonList+"?limit=100") else { return }
 
         URLSession.shared.dataTask(with: url) { data, _, _ in
@@ -32,7 +33,7 @@ public class NetworkingProvider : APIServiceProtocol {
     // MARK: - DetailView Request
     // example: https://pokeapi.co/api/v2/pokemon-species/5
 
-     func getFlavorTextEntry(index: Int, success: @escaping (_ flavorTextEntry: String?) -> Void, failure: @escaping (_ error: Error?) -> Void ) {
+    public func getFlavorTextEntry(index: Int, success: @escaping (_ flavorTextEntry: String?) -> Void, failure: @escaping (_ error: Error?) -> Void ) {
         guard let url = URL(string: "\(Service.detailedSpecies)\(index)") else { return }
         print("URL_________=\(url)")
         URLSession.shared.dataTask(with: url) { (data, _, error) in
@@ -52,7 +53,7 @@ public class NetworkingProvider : APIServiceProtocol {
         }.resume()
     }
 
-     func getSprite(url: String, success: @escaping (PokemonSprites) -> Void) {
+    public func getSprite(url: String, success: @escaping (PokemonSprites) -> Void) {
         guard let url = URL(string: url) else { return }
 
         URLSession.shared.dataTask(with: url) { data, _, _ in

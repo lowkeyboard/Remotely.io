@@ -20,7 +20,7 @@
 		A21052E02899165C003381B2 /* PokemonSprites.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21052D72899165B003381B2 /* PokemonSprites.swift */; };
 		A21052E12899165C003381B2 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21052D82899165B003381B2 /* Pokemon.swift */; };
 		A21052E22899165C003381B2 /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21052DA2899165B003381B2 /* APIServiceProtocol.swift */; };
-		A21052E52899178F003381B2 /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21052E42899178F003381B2 /* NetworkingProvider.swift */; };
+		A21052E52899178F003381B2 /* PokemonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21052E42899178F003381B2 /* PokemonService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		A21052D72899165B003381B2 /* PokemonSprites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonSprites.swift; sourceTree = "<group>"; };
 		A21052D82899165B003381B2 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		A21052DA2899165B003381B2 /* APIServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceProtocol.swift; sourceTree = "<group>"; };
-		A21052E42899178F003381B2 /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
+		A21052E42899178F003381B2 /* PokemonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 				A21052AA2899149E003381B2 /* PokemonAPI.h */,
 				A21052AB2899149E003381B2 /* PokemonAPI.docc */,
 				A21052CA28991592003381B2 /* Dummy.swift */,
-				A21052E42899178F003381B2 /* NetworkingProvider.swift */,
+				A21052E42899178F003381B2 /* PokemonService.swift */,
 			);
 			path = PokemonAPI;
 			sourceTree = "<group>";
@@ -312,7 +312,7 @@
 				A21052DC2899165C003381B2 /* PokemonSpriteResponse.swift in Sources */,
 				A21052E12899165C003381B2 /* Pokemon.swift in Sources */,
 				A21052DD2899165C003381B2 /* DetailResponse.swift in Sources */,
-				A21052E52899178F003381B2 /* NetworkingProvider.swift in Sources */,
+				A21052E52899178F003381B2 /* PokemonService.swift in Sources */,
 				A21052CB28991592003381B2 /* Dummy.swift in Sources */,
 				A21052DE2899165C003381B2 /* PokemonResponse.swift in Sources */,
 				A21052AC2899149E003381B2 /* PokemonAPI.docc in Sources */,

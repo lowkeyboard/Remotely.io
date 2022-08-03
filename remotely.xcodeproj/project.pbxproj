@@ -18,6 +18,7 @@
 		A27A2C6B27E27747006BB050 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27A2C6A27E27747006BB050 /* LoginViewController.swift */; };
 		A27A2C7027E27748006BB050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A27A2C6F27E27748006BB050 /* Assets.xcassets */; };
 		A27A2C7327E27748006BB050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27A2C7127E27748006BB050 /* LaunchScreen.storyboard */; };
+		A2995843289A95A000EFE7FB /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2995842289A95A000EFE7FB /* PokemonTableViewCell.swift */; };
 		A2B90F6528983C5500AE1DA0 /* RickyMortyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B90F6428983C5500AE1DA0 /* RickyMortyViewController.swift */; };
 		A2B90F6728983C8000AE1DA0 /* RickyMortyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B90F6628983C8000AE1DA0 /* RickyMortyTableViewCell.swift */; };
 		A2B90F6928983C9D00AE1DA0 /* RickyMortyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B90F6828983C9D00AE1DA0 /* RickyMortyViewModel.swift */; };
@@ -78,6 +79,7 @@
 		A27A2C6F27E27748006BB050 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A27A2C7227E27748006BB050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A27A2C7427E27748006BB050 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2995842289A95A000EFE7FB /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
 		A2B90F6428983C5500AE1DA0 /* RickyMortyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyViewController.swift; sourceTree = "<group>"; };
 		A2B90F6628983C8000AE1DA0 /* RickyMortyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyTableViewCell.swift; sourceTree = "<group>"; };
 		A2B90F6828983C9D00AE1DA0 /* RickyMortyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyViewModel.swift; sourceTree = "<group>"; };
@@ -200,6 +202,15 @@
 			path = remotely;
 			sourceTree = "<group>";
 		};
+		A2995846289A965B00EFE7FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B778BAA227EED420007BC766 /* HomeViewController.swift */,
+				A2995842289A95A000EFE7FB /* PokemonTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A2B18D01286D88E80037945E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,7 +298,7 @@
 		B778BA9B27EED340007BC766 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B778BAA227EED420007BC766 /* HomeViewController.swift */,
+				A2995846289A965B00EFE7FB /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -459,6 +470,7 @@
 				A27A2C6727E27747006BB050 /* AppDelegate.swift in Sources */,
 				A2B90F6728983C8000AE1DA0 /* RickyMortyTableViewCell.swift in Sources */,
 				A27A2C6927E27747006BB050 /* SceneDelegate.swift in Sources */,
+				A2995843289A95A000EFE7FB /* PokemonTableViewCell.swift in Sources */,
 				B748A988286545A20079C20D /* SessionManager.swift in Sources */,
 				A2551C74286C4EBB00AE3558 /* User.swift in Sources */,
 				B778BAA327EED420007BC766 /* HomeViewController.swift in Sources */,
