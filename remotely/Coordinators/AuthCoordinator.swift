@@ -7,17 +7,22 @@
 
 import Foundation
 import UIKit
+import PokemonAPI
 
 class AuthCoordinator: Coordinator {
 
     var navigationController: UINavigationController?
+    var viewModel: PokemonViewModelProtocol?
+    let service = PokemonService()
 
     func eventOccured(with type: AuthEvent) {
         switch type {
         case .loginbuttonTapped:
-            var vc: UIViewController & Coordinating = HomeViewController()
 //            var vc: UIViewController & Coordinating = RickyMortyViewController()
-            vc.coordinator? = self
+
+            let vc = HomeViewController()
+            vc.viewModel = HomeViewModel(service: service)
+
             navigationController?.pushViewController(vc, animated: true)
 
         case .loginSelected:

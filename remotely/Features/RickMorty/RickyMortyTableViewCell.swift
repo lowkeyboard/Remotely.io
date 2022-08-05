@@ -7,6 +7,7 @@
 
 import UIKit
 import AlamofireImage
+
 class RickyMortyTableViewCell: UITableViewCell {
 
     private let customImage: UIImageView = UIImageView()
