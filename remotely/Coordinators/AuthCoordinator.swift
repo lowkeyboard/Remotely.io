@@ -22,7 +22,6 @@ class AuthCoordinator: Coordinator {
 
             let vc = HomeViewController()
             vc.viewModel = HomeViewModel(service: service)
-
             navigationController?.pushViewController(vc, animated: true)
 
         case .loginSelected:

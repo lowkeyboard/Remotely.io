@@ -32,6 +32,8 @@
 		B778BA9F27EED3B7007BC766 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778BA9E27EED3B7007BC766 /* Coordinator.swift */; };
 		B778BAA127EED3F6007BC766 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778BAA027EED3F6007BC766 /* AuthCoordinator.swift */; };
 		B778BAA327EED420007BC766 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778BAA227EED420007BC766 /* HomeViewController.swift */; };
+		B77B0C24289DBD2400FCA339 /* PokemonTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77B0C23289DBD2400FCA339 /* PokemonTableCell.swift */; };
+		B77B0C28289DC08300FCA339 /* Dumm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77B0C27289DC08300FCA339 /* Dumm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		B778BA9E27EED3B7007BC766 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B778BAA027EED3F6007BC766 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		B778BAA227EED420007BC766 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B77B0C23289DBD2400FCA339 /* PokemonTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableCell.swift; sourceTree = "<group>"; };
+		B77B0C27289DC08300FCA339 /* Dumm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dumm.swift; sourceTree = "<group>"; };
 		D399BBDF69B3330DA0F4EB8E /* Pods_remotely.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_remotely.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2554664E8AF5042688EEFAA /* Pods-remotely.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-remotely.release.xcconfig"; path = "Target Support Files/Pods-remotely/Pods-remotely.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				B778BAA227EED420007BC766 /* HomeViewController.swift */,
+				B77B0C23289DBD2400FCA339 /* PokemonTableCell.swift */,
+				B77B0C27289DC08300FCA339 /* Dumm.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -501,7 +507,9 @@
 				B778BAA127EED3F6007BC766 /* AuthCoordinator.swift in Sources */,
 				A2B90F6928983C9D00AE1DA0 /* RickyMortyViewModel.swift in Sources */,
 				A2722197289BC5A600F0D126 /* PokemonPresentation.swift in Sources */,
+				B77B0C24289DBD2400FCA339 /* PokemonTableCell.swift in Sources */,
 				A2B90F6B28983CBB00AE1DA0 /* RickyMortyModel.swift in Sources */,
+				B77B0C28289DC08300FCA339 /* Dumm.swift in Sources */,
 				B778BA9F27EED3B7007BC766 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

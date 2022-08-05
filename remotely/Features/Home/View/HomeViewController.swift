@@ -16,25 +16,30 @@ final class HomeViewController: UIViewController {
         }
     }
 
-    private let tableView: UITableView = UITableView()
+    var tableView: UITableView!
     private var PokemonList: [PokemonPresentation] = []
 
     override func viewDidLoad() {
         title = "Home view controller"
         view.backgroundColor = .RTWhite
-        view.addSubview(tableView)
-//        tableView.snp.makeConstraints { (make) in
-//            make.top.equalTo(labelTitle.snp.bottom).offset(5)
-//            make.bottom.equalToSuperview()
-//            make.left.right.equalTo(labelTitle)
-//        }
-
-        viewModel.delegate = self
+        
+        tableView = UITableView(frame: .zero)
+        self.view.addSubview(tableView)
 
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TestCell.self, forCellReuseIdentifier: TestCell.identifier)
+        tableView.estimatedRowHeight = 100
+        DispatchQueue.main.async {
+            self.tableView.backgroundView?.backgroundColor = .RTGreenDeep
+        }
+        
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
 
+        
+        viewModel.delegate = self
         viewModel.load()
 
     }
@@ -53,11 +58,11 @@ class TestCell: UITableViewCell {
     func configure() {
         label = UILabel(frame: .zero)
         self.contentView.addSubview(label)
-        label.snp.makeConstraints {
-            $0.left.equalToSuperview().offset(10)
-            $0.right.equalToSuperview().offset(-10)
-            $0.top.equalToSuperview().offset(50)
-            $0.bottom.equalToSuperview().offset(-50)
+        label.snp.makeConstraints { (make) in 
+            make.left.equalToSuperview().offset(10)
+            make.right.equalToSuperview().offset(-10)
+            make.top.equalToSuperview().offset(10)
+            make.bottom.equalToSuperview().offset(-10)
         }
     }
 
@@ -76,7 +81,8 @@ extension HomeViewController: PokemonViewModelDelegate {
             UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
         case .showPokemonList(let PokemonList):
             self.PokemonList = PokemonList
-            tableView.reloadData()
+            self.tableView.reloadData()
+            
         }
     }
 
@@ -86,11 +92,7 @@ extension HomeViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        guard let cell: TestCell = tableView.dequeueReusableCell(withIdentifier: TestCell.identifier) as? TestCell else {
-            return UITableViewCell()
-
-        }
-
+         let cell: TestCell = tableView.dequeueReusableCell(withIdentifier: TestCell.identifier) as! TestCell
         let Pokemon = PokemonList[indexPath.row]
         cell.textLabel?.text = Pokemon.title
         cell.detailTextLabel?.text = Pokemon.detail

@@ -324,11 +324,11 @@
 #endif
 #endif
 
-// Macro useful for more verbose logging from NSURLSession during debugging.
+// Macro useful for examining messages from NSURLSession during debugging.
 #if 0
-#define GTMSESSION_LOG_DEBUG_VERBOSE(...) GTMSESSION_LOG_DEBUG(__VA_ARGS__)
+#define GTM_LOG_SESSION_DELEGATE(...) GTMSESSION_LOG_DEBUG(__VA_ARGS__)
 #else
-#define GTMSESSION_LOG_DEBUG_VERBOSE(...)
+#define GTM_LOG_SESSION_DELEGATE(...)
 #endif
 
 // These will be removed in the near future, folks should move off of them.
