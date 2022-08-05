@@ -16,16 +16,53 @@ final class HomeViewController: UIViewController {
         }
     }
 
-    private weak var tableView: UITableView!
+    private let tableView: UITableView = UITableView()
     private var PokemonList: [PokemonPresentation] = []
 
     override func viewDidLoad() {
         title = "Home view controller"
         view.backgroundColor = .RTWhite
+        view.addSubview(tableView)
+//        tableView.snp.makeConstraints { (make) in
+//            make.top.equalTo(labelTitle.snp.bottom).offset(5)
+//            make.bottom.equalToSuperview()
+//            make.left.right.equalTo(labelTitle)
+//        }
+
         viewModel.delegate = self
+
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(TestCell.self, forCellReuseIdentifier: TestCell.identifier)
 
         viewModel.load()
 
+    }
+}
+
+class TestCell: UITableViewCell {
+    static let identifier: String = "test_cell_identifier"
+
+    var label: UILabel!
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.configure()
+    }
+
+    func configure() {
+        label = UILabel(frame: .zero)
+        self.contentView.addSubview(label)
+        label.snp.makeConstraints {
+            $0.left.equalToSuperview().offset(10)
+            $0.right.equalToSuperview().offset(-10)
+            $0.top.equalToSuperview().offset(50)
+            $0.bottom.equalToSuperview().offset(-50)
+        }
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
@@ -48,7 +85,12 @@ extension HomeViewController: PokemonViewModelDelegate {
 extension HomeViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonListCell", for: indexPath)
+
+        guard let cell: TestCell = tableView.dequeueReusableCell(withIdentifier: TestCell.identifier) as? TestCell else {
+            return UITableViewCell()
+
+        }
+
         let Pokemon = PokemonList[indexPath.row]
         cell.textLabel?.text = Pokemon.title
         cell.detailTextLabel?.text = Pokemon.detail
