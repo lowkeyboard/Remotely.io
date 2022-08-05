@@ -15,6 +15,7 @@ class RickyMortyTableViewCell: UITableViewCell {
     private let customDescription: UILabel = UILabel()
 
     private let randomImage: String = "https://picsum.photos/200/300"
+    
 
     enum Identifier: String {
         case custom = "vb10"
