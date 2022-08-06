@@ -67,12 +67,12 @@ final class LoginViewController: UIViewController, Coordinating {
         loginButton.addTarget(self, action: #selector(self.loginButtonAction(sender:)), for: .touchUpInside)
 
         DispatchQueue.main.async {
-            self.view.backgroundColor = .RTGreyLight
+            self.view.backgroundColor = .RTGreenDeep
             self.navigationItem.hidesBackButton = true
 
             // label configuration
             self.labelTitle.font = .boldSystemFont(ofSize: 25)
-            self.labelTitle.text = "Sign in to Remotely.io"
+            self.labelTitle.text = "Sign in to explore Pokemon World"
             self.labelTitle.font = UIFont(name: "Arial Hebrew", size: 20)
 
             let fullString = NSMutableAttributedString(string:"HI FELLA ")
