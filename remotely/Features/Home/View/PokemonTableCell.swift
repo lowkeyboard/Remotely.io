@@ -50,6 +50,7 @@ class PokemonTableCell: UITableViewCell {
     
     func saveModel(pokemon: PokemonPresentation, index: Int) {
         label.text = pokemon.title
+        label.font = UIFont(name: "Pokemon Solid", size: 15)
         customImage.af.setImage(withURL: URL(string: randomImage + "\(index+1).png" ) ?? URL(string: randomImage + "3.png")!)
     }
 
