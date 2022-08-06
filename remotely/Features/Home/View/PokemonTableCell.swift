@@ -28,16 +28,16 @@ class PokemonTableCell: UITableViewCell {
         self.contentView.addSubview(customImage)
 
         label.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(10)
-            make.right.equalToSuperview().offset(-10)
+            make.left.equalToSuperview().offset(40)
+            make.right.equalToSuperview().offset(80)
             make.top.equalToSuperview().offset(10)
             make.bottom.equalToSuperview().offset(-10)
         }
         
         customImage.snp.makeConstraints { (make) in
-            make.height.equalTo(100)
+            make.height.equalTo(80)
             make.top.equalTo(contentView)
-            make.left.equalToSuperview()
+            make.left.equalTo(label).offset(200)
             make.right.equalToSuperview()
         }
 
