@@ -10,12 +10,14 @@ import PokemonAPI
 
 final class HomeViewModel: PokemonViewModelProtocol {
 
+    weak var coordinator: FeedCoordinator?
     var delegate: PokemonViewModelDelegate?
     private var pokemons: [Pokemon] = []
     private let service: APIServiceProtocol
 
-    init(service: APIServiceProtocol) {
+    init(service: APIServiceProtocol, coordinator: FeedCoordinator) {
         self.service = service
+        self.coordinator = coordinator
     }
 
     func load() {
@@ -30,13 +32,15 @@ final class HomeViewModel: PokemonViewModelProtocol {
             let presenatations = self.pokemons.map({ PokemonPresentation(pokemon: $0) })
                 self.notify(.showPokemonList(presenatations))
         } failure: { error in
-            print(error)
+            print(error ?? "Error occured with pokemon service.")
         }
 
     }
 
     func selectPokemon(at index: Int) {
         print("pokemon at \(index) has selected")
+        self.coordinator?.navigateToDetail(index: index)
+
     }
 
     private func notify(_ output: PokemonViewModelOutput) {

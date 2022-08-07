@@ -19,7 +19,7 @@ final class HomeViewController: UIViewController {
     var tableView: UITableView!
     private var PokemonList: [PokemonPresentation] = []
     var homeTitle: UILabel!
-    
+
     override func viewDidLoad() {
         view.backgroundColor = .white
         self.navigationController?.setNavigationBarHidden(true, animated: false)
@@ -28,7 +28,7 @@ final class HomeViewController: UIViewController {
         self.view.addSubview(tableView)
         self.view.addSubview(homeTitle)
         makeTableView()
-        
+
         homeTitle.text = "Pokemon Library"
         homeTitle.font = UIFont(name: "Pokemon Solid", size: 40)
         homeTitle.snp.makeConstraints { make in
@@ -36,19 +36,19 @@ final class HomeViewController: UIViewController {
             make.left.equalTo(view).offset(10)
             make.right.equalTo(view).offset(-10)
         }
-        
+
         viewModel.delegate = self
         viewModel.load()
 
     }
-    
+
     func makeTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(PokemonTableCell.self, forCellReuseIdentifier: PokemonTableCell.identifier)
         tableView.rowHeight = 100
         tableView.separatorColor = .RTPrimary
-        
+
         tableView.snp.makeConstraints { make in
             make.top.equalTo(homeTitle.snp.bottom).offset(5)
             make.bottom.equalToSuperview()
@@ -58,7 +58,6 @@ final class HomeViewController: UIViewController {
 
     }
 }
-
 
 extension HomeViewController: PokemonViewModelDelegate {
 
@@ -71,7 +70,7 @@ extension HomeViewController: PokemonViewModelDelegate {
         case .showPokemonList(let PokemonList):
             self.PokemonList = PokemonList
             self.tableView.reloadData()
-            
+
         }
     }
 
@@ -84,7 +83,7 @@ extension HomeViewController: UITableViewDataSource {
          let cell: PokemonTableCell = tableView.dequeueReusableCell(withIdentifier: PokemonTableCell.identifier) as! PokemonTableCell
         let Pokemon = PokemonList[indexPath.row]
         cell.saveModel(pokemon: Pokemon, index: indexPath.row)
-        
+
         return cell
     }
 
@@ -98,6 +97,5 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         viewModel.selectPokemon(at: indexPath.row)
-
     }
 }

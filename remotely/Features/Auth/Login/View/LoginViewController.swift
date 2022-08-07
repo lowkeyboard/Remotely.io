@@ -8,8 +8,9 @@
 import UIKit
 import SnapKit
 
-final class LoginViewController: UIViewController, Coordinating {
-    var coordinator: Coordinator?
+final class LoginViewController: UIViewController {
+    var coordinator: MainCoordinator?
+
     private let labelTitle: UILabel = UILabel()
     private let welcomeLabel = UILabel()
     private let usernameTextField: UITextField = UITextField()
@@ -48,10 +49,8 @@ final class LoginViewController: UIViewController, Coordinating {
             return
         }
 
-        let currentUser = NetworkManager.shared.signInWith(email: usernameTF, password: passwordTF)
-
-        self.coordinator?.eventOccured(with: .loginbuttonTapped)
-
+        // TODO: move out of vc .
+        self.coordinator?.navigateToHome()
     }
 
     private func configure() {
@@ -92,7 +91,7 @@ final class LoginViewController: UIViewController, Coordinating {
             self.welcomeLabel.attributedText = fullString
 
             // input configuration
-            self.usernameTextField.placeholder = "eg. jamesblack@gmail.com"
+            self.usernameTextField.placeholder = "eg. jessica.parker@mail.com"
             self.usernameTextField.backgroundColor = .white
             self.usernameTextField.borderStyle = .roundedRect
 

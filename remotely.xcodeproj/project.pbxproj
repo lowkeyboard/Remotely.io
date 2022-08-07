@@ -10,6 +10,7 @@
 		580E3E1191FB052D932459E3 /* Pods_remotely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D399BBDF69B3330DA0F4EB8E /* Pods_remotely.framework */; };
 		A21052CF289915BB003381B2 /* PokemonAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A21052C728991525003381B2 /* PokemonAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A21954EB27E4B4E000310786 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21954EA27E4B4E000310786 /* OnboardViewController.swift */; };
+		A24C643B289FB22A0002A095 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24C643A289FB22A0002A095 /* HomeDetailViewController.swift */; };
 		A2551C72286C32A700AE3558 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2551C71286C32A700AE3558 /* UIView+Extension.swift */; };
 		A2551C74286C4EBB00AE3558 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2551C73286C4EBB00AE3558 /* User.swift */; };
 		A2551C76286C505900AE3558 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2551C75286C505900AE3558 /* NetworkManager.swift */; };
@@ -21,16 +22,12 @@
 		A27A2C6B27E27747006BB050 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27A2C6A27E27747006BB050 /* LoginViewController.swift */; };
 		A27A2C7027E27748006BB050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A27A2C6F27E27748006BB050 /* Assets.xcassets */; };
 		A27A2C7327E27748006BB050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27A2C7127E27748006BB050 /* LaunchScreen.storyboard */; };
-		A2B90F6528983C5500AE1DA0 /* RickyMortyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B90F6428983C5500AE1DA0 /* RickyMortyViewController.swift */; };
-		A2B90F6728983C8000AE1DA0 /* RickyMortyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B90F6628983C8000AE1DA0 /* RickyMortyTableViewCell.swift */; };
-		A2B90F6928983C9D00AE1DA0 /* RickyMortyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B90F6828983C9D00AE1DA0 /* RickyMortyViewModel.swift */; };
-		A2B90F6B28983CBB00AE1DA0 /* RickyMortyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B90F6A28983CBB00AE1DA0 /* RickyMortyModel.swift */; };
-		A2B90F6D28983D3000AE1DA0 /* RickyMortyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B90F6C28983D3000AE1DA0 /* RickyMortyService.swift */; };
+		A2B73805289E8D2C00E9DC29 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B73804289E8D2C00E9DC29 /* FeedCoordinator.swift */; };
+		A2B73807289E93DE00E9DC29 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B73806289E93DE00E9DC29 /* MainCoordinator.swift */; };
 		A2DA24AE286B1C8F005FD90C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2DA24AD286B1C8F005FD90C /* GoogleService-Info.plist */; };
 		A2E031B827E318C800381667 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E031B727E318C800381667 /* Color+Extensions.swift */; };
 		B748A988286545A20079C20D /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B748A987286545A20079C20D /* SessionManager.swift */; };
 		B778BA9F27EED3B7007BC766 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778BA9E27EED3B7007BC766 /* Coordinator.swift */; };
-		B778BAA127EED3F6007BC766 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778BAA027EED3F6007BC766 /* AuthCoordinator.swift */; };
 		B778BAA327EED420007BC766 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778BAA227EED420007BC766 /* HomeViewController.swift */; };
 		B77B0C24289DBD2400FCA339 /* PokemonTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77B0C23289DBD2400FCA339 /* PokemonTableCell.swift */; };
 		B77B0C2C289DFC1A00FCA339 /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B77B0C2A289DFC1A00FCA339 /* Pokemon Solid.ttf */; };
@@ -73,6 +70,7 @@
 		A21052C128991525003381B2 /* PokemonAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PokemonAPI.xcodeproj; path = PokemonAPI/PokemonAPI.xcodeproj; sourceTree = SOURCE_ROOT; };
 		A2134F1F28969054007BE3E4 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A21954EA27E4B4E000310786 /* OnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
+		A24C643A289FB22A0002A095 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		A2551C71286C32A700AE3558 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A2551C73286C4EBB00AE3558 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A2551C75286C505900AE3558 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -87,16 +85,12 @@
 		A27A2C6F27E27748006BB050 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A27A2C7227E27748006BB050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A27A2C7427E27748006BB050 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2B90F6428983C5500AE1DA0 /* RickyMortyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyViewController.swift; sourceTree = "<group>"; };
-		A2B90F6628983C8000AE1DA0 /* RickyMortyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyTableViewCell.swift; sourceTree = "<group>"; };
-		A2B90F6828983C9D00AE1DA0 /* RickyMortyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyViewModel.swift; sourceTree = "<group>"; };
-		A2B90F6A28983CBB00AE1DA0 /* RickyMortyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyModel.swift; sourceTree = "<group>"; };
-		A2B90F6C28983D3000AE1DA0 /* RickyMortyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyService.swift; sourceTree = "<group>"; };
+		A2B73804289E8D2C00E9DC29 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
+		A2B73806289E93DE00E9DC29 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		A2DA24AD286B1C8F005FD90C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2E031B727E318C800381667 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		B748A987286545A20079C20D /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		B778BA9E27EED3B7007BC766 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		B778BAA027EED3F6007BC766 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		B778BAA227EED420007BC766 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B77B0C23289DBD2400FCA339 /* PokemonTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableCell.swift; sourceTree = "<group>"; };
 		B77B0C2A289DFC1A00FCA339 /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
@@ -151,6 +145,14 @@
 				A21052C928991525003381B2 /* PokemonAPITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A24C6437289FB21F0002A095 /* HomeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A24C643A289FB22A0002A095 /* HomeDetailViewController.swift */,
+			);
+			path = HomeDetail;
 			sourceTree = "<group>";
 		};
 		A264577127F1CCB3008B5042 /* Onboard */ = {
@@ -245,18 +247,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A2B90F6128983C3C00AE1DA0 /* RickMorty */ = {
-			isa = PBXGroup;
-			children = (
-				A2B90F6428983C5500AE1DA0 /* RickyMortyViewController.swift */,
-				A2B90F6628983C8000AE1DA0 /* RickyMortyTableViewCell.swift */,
-				A2B90F6828983C9D00AE1DA0 /* RickyMortyViewModel.swift */,
-				A2B90F6A28983CBB00AE1DA0 /* RickyMortyModel.swift */,
-				A2B90F6C28983D3000AE1DA0 /* RickyMortyService.swift */,
-			);
-			path = RickMorty;
-			sourceTree = "<group>";
-		};
 		A2C0E5152895748700E4646F /* Commons */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,7 +279,7 @@
 		A2E031B327E3144900381667 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				A2B90F6128983C3C00AE1DA0 /* RickMorty */,
+				A24C6437289FB21F0002A095 /* HomeDetail */,
 				A264577127F1CCB3008B5042 /* Onboard */,
 				B778BA9B27EED340007BC766 /* Home */,
 				B778BA9927EED32A007BC766 /* Auth */,
@@ -310,7 +300,8 @@
 			isa = PBXGroup;
 			children = (
 				B778BA9E27EED3B7007BC766 /* Coordinator.swift */,
-				B778BAA027EED3F6007BC766 /* AuthCoordinator.swift */,
+				A2B73804289E8D2C00E9DC29 /* FeedCoordinator.swift */,
+				A2B73806289E93DE00E9DC29 /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -507,21 +498,18 @@
 				A2722195289BC57100F0D126 /* HomeContracts.swift in Sources */,
 				A2551C72286C32A700AE3558 /* UIView+Extension.swift in Sources */,
 				A27A2C6B27E27747006BB050 /* LoginViewController.swift in Sources */,
-				A2B90F6528983C5500AE1DA0 /* RickyMortyViewController.swift in Sources */,
 				A21954EB27E4B4E000310786 /* OnboardViewController.swift in Sources */,
-				A2B90F6D28983D3000AE1DA0 /* RickyMortyService.swift in Sources */,
+				A2B73805289E8D2C00E9DC29 /* FeedCoordinator.swift in Sources */,
+				A2B73807289E93DE00E9DC29 /* MainCoordinator.swift in Sources */,
 				A27A2C6727E27747006BB050 /* AppDelegate.swift in Sources */,
-				A2B90F6728983C8000AE1DA0 /* RickyMortyTableViewCell.swift in Sources */,
 				A27A2C6927E27747006BB050 /* SceneDelegate.swift in Sources */,
 				B748A988286545A20079C20D /* SessionManager.swift in Sources */,
 				A2551C74286C4EBB00AE3558 /* User.swift in Sources */,
 				B778BAA327EED420007BC766 /* HomeViewController.swift in Sources */,
+				A24C643B289FB22A0002A095 /* HomeDetailViewController.swift in Sources */,
 				A2E031B827E318C800381667 /* Color+Extensions.swift in Sources */,
-				B778BAA127EED3F6007BC766 /* AuthCoordinator.swift in Sources */,
-				A2B90F6928983C9D00AE1DA0 /* RickyMortyViewModel.swift in Sources */,
 				A2722197289BC5A600F0D126 /* PokemonPresentation.swift in Sources */,
 				B77B0C24289DBD2400FCA339 /* PokemonTableCell.swift in Sources */,
-				A2B90F6B28983CBB00AE1DA0 /* RickyMortyModel.swift in Sources */,
 				B778BA9F27EED3B7007BC766 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

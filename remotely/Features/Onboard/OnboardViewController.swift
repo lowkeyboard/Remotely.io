@@ -7,8 +7,8 @@
 
 import UIKit
 
-class OnboardViewController: UIViewController, Coordinating {
-    var coordinator: Coordinator?
+class OnboardViewController: UIViewController {
+    var coordinator: MainCoordinator?
 
     private let myView: UIView = {
         let myView = UIView()
@@ -96,7 +96,7 @@ class OnboardViewController: UIViewController, Coordinating {
     @objc func signInbuttonAction(sender: UIButton) {
       print("signInbuttonAction tapped")
         //   navigate to sign in page
-        coordinator?.eventOccured(with: .loginSelected)
+        coordinator?.navigateLogin()
     }
 
     private func addConstraints() {

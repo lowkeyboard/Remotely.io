@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol PokemonViewModelProtocol: class {
+protocol PokemonViewModelProtocol: AnyObject {
     var delegate: PokemonViewModelDelegate? { get set }
     func load()
     func selectPokemon(at index: Int)
@@ -19,19 +19,7 @@ enum PokemonViewModelOutput: Equatable {
     case showPokemonList([PokemonPresentation])
 }
 
-protocol PokemonViewModelDelegate: class {
+protocol PokemonViewModelDelegate: AnyObject {
 
     func handleViewModelOutput(_ output: PokemonViewModelOutput)
-//    func navigate(to route: PokemonViewRoute)
-}
-
-protocol DummyProtocol: class {
-    var dummyDelegate: DummyDelegate? { get set }
-
-    func dummyLoad()
-}
-
-protocol DummyDelegate: class {
-    func welcome()
-
 }

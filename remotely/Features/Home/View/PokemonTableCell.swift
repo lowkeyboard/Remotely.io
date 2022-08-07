@@ -33,7 +33,7 @@ class PokemonTableCell: UITableViewCell {
             make.top.equalToSuperview().offset(10)
             make.bottom.equalToSuperview().offset(-10)
         }
-        
+
         customImage.snp.makeConstraints { (make) in
             make.height.equalTo(80)
             make.top.equalTo(contentView)
@@ -41,18 +41,16 @@ class PokemonTableCell: UITableViewCell {
             make.right.equalToSuperview()
         }
 
-        
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     func saveModel(pokemon: PokemonPresentation, index: Int) {
         label.text = pokemon.title
         label.font = UIFont(name: "Pokemon Solid", size: 20)
         customImage.af.setImage(withURL: URL(string: randomImage + "\(index+1).png" ) ?? URL(string: randomImage + "3.png")!)
     }
-
 
 }
