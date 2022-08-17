@@ -20,7 +20,7 @@
 [![Coveralls](https://img.shields.io/coveralls/github/gitpoint/git-point.svg?style=flat-square)]()
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-**Available for both iOS.**
+**Available for iOS.**
 
 <p align="center">
   <img src = "https://im2.ezgif.com/tmp/ezgif-2-d762058f87.gif" width=600 height=1282>
