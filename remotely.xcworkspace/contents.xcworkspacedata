@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PokemonAPI/PokemonAPI.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Podfile">
+   </FileRef>
+   <FileRef
       location = "group:remotely.xcodeproj">
    </FileRef>
    <FileRef

@@ -8,8 +8,9 @@
 import UIKit
 import SnapKit
 
-final class LoginViewController: UIViewController, Coordinating {
-    var coordinator: Coordinator?
+final class LoginViewController: UIViewController {
+    var coordinator: MainCoordinator?
+
     private let labelTitle: UILabel = UILabel()
     private let welcomeLabel = UILabel()
     private let usernameTextField: UITextField = UITextField()
@@ -28,11 +29,28 @@ final class LoginViewController: UIViewController, Coordinating {
         super.viewDidLoad()
         configure()
         self.hideKeyboardWhenTappedAround()
+        usernameTextField.text = "cagla@mail.com"
+        passwordTextField.text = "123456"
 
     }
 
     @objc func loginButtonAction(sender: UIButton) {
       print("loginButtonAction tapped")
+
+        guard let usernameTF = usernameTextField.text, let passwordTF = passwordTextField.text, !usernameTF.isEmpty, !passwordTF.isEmpty else {
+            print("empty input handling")
+            let alert = UIAlertController(title: "Cannot be left empty.", message: "Please fill in  username and password.", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"Request Failed\" alert occured.")
+            }))
+
+                self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        // TODO: move out of vc .
+        self.coordinator?.navigateToHome()
     }
 
     private func configure() {
@@ -48,17 +66,18 @@ final class LoginViewController: UIViewController, Coordinating {
         loginButton.addTarget(self, action: #selector(self.loginButtonAction(sender:)), for: .touchUpInside)
 
         DispatchQueue.main.async {
-            self.view.backgroundColor = .RTSecondary
+            self.view.backgroundColor = .RTGreenDeep
+            self.navigationItem.hidesBackButton = true
 
             // label configuration
             self.labelTitle.font = .boldSystemFont(ofSize: 25)
-            self.labelTitle.text = "Sign in to Remotely.io"
+            self.labelTitle.text = "Sign in to explore Pokemon World"
             self.labelTitle.font = UIFont(name: "Arial Hebrew", size: 20)
 
             let fullString = NSMutableAttributedString(string:"HI FELLA ")
 
 //            self.welcomeLabel.text = "Hi Fella"
-            self.welcomeLabel.textColor = .RTWhite
+            self.welcomeLabel.textColor = .RTWhiteShade
             self.welcomeLabel.font = UIFont(name: "ArialHB", size: 13)
             self.imageAttachment.bounds = CGRect(x: 0, y: -8, width: 25, height: 25)
             self.imageAttachment.image = UIImage(named:"emoji-hand-icon")
@@ -72,7 +91,7 @@ final class LoginViewController: UIViewController, Coordinating {
             self.welcomeLabel.attributedText = fullString
 
             // input configuration
-            self.usernameTextField.placeholder = "eg. jamesblack@gmail.com"
+            self.usernameTextField.placeholder = "eg. jessica.parker@mail.com"
             self.usernameTextField.backgroundColor = .white
             self.usernameTextField.borderStyle = .roundedRect
 
@@ -140,6 +159,7 @@ extension LoginViewController {
             make.right.equalTo(view).offset(-10)
             make.height.greaterThanOrEqualTo(10)
         }
+
     }
 
     func makeInput() {
