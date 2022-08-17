@@ -20,6 +20,5 @@ enum PokemonViewModelOutput: Equatable {
 }
 
 protocol PokemonViewModelDelegate: AnyObject {
-
     func handleViewModelOutput(_ output: PokemonViewModelOutput)
 }
